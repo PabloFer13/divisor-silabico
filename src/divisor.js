@@ -47,7 +47,7 @@ function UAIState() {
 
 function UAState() {
   silaba = `${silaba}a`;
-  if (pos > palabra.length) {
+  if (pos < palabra.length) {
     const ch = palabra[pos];
     pos = pos + 1;
     switch (ch) {
@@ -653,6 +653,7 @@ function BState() {
 }
 
 function divide() {
+  console.log("Divide: ", pos, palabra[pos]);
   if (pos < palabra.length) {
     const ch = palabra[pos];
     pos = pos + 1;
@@ -737,6 +738,7 @@ function divide() {
 
 
 function getSilabas(word) {
+  console.log(word);
   palabra = word;
   silabas = [];
   silaba = '';
